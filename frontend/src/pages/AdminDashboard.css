@@ -1629,4 +1629,64 @@ tbody tr:hover {
   white-space: nowrap;
 }
 
+/* Final text alignment + size normalization across admin modules */
+.admin-dashboard .overview-section,
+.admin-dashboard .pending-section,
+.admin-dashboard .doctors-section,
+.admin-dashboard .appointments-section,
+.admin-dashboard .staff-section,
+.admin-dashboard .contacts-section,
+.admin-dashboard .callbacks-section,
+.admin-dashboard .recent-section,
+.admin-dashboard .section {
+  text-align: center;
+  font-size: 14px;
+}
+
+.admin-dashboard .section-header,
+.admin-dashboard .pending-header,
+.admin-dashboard .callback-header,
+.admin-dashboard .contact-header {
+  align-items: center;
+}
+
+.admin-dashboard .section-header h2,
+.admin-dashboard .pending-section h2,
+.admin-dashboard .appointments-section h2,
+.admin-dashboard .staff-section h2,
+.admin-dashboard .contacts-section h2,
+.admin-dashboard .callbacks-section h2,
+.admin-dashboard .doctors-section h2,
+.admin-dashboard .recent-section h2 {
+  font-size: 32px;
+  line-height: 1.15;
+}
+
+.admin-dashboard .pending-header h3,
+.admin-dashboard .callback-header h3,
+.admin-dashboard .contact-header h3 {
+  font-size: 24px;
+}
+
+.admin-dashboard .pending-details p,
+.admin-dashboard .callback-details p,
+.admin-dashboard .contact-card p,
+.admin-dashboard .callback-card p {
+  text-align: center;
+  font-size: 13px;
+}
+
+.admin-dashboard table th,
+.admin-dashboard table td {
+  text-align: center;
+  vertical-align: middle;
+  font-size: 13px;
+}
+
+.admin-dashboard .no-data {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 

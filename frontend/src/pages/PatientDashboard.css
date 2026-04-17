@@ -1492,4 +1492,63 @@
   }
 }
 
+/* Final text alignment + size normalization across patient modules */
+.patient-dashboard .overview-section,
+.patient-dashboard .appointments-section,
+.patient-dashboard .prescriptions-section,
+.patient-dashboard .reports-section,
+.patient-dashboard .bills-section,
+.patient-dashboard .settings-section,
+.patient-dashboard .settings-card,
+.patient-dashboard .overview-card,
+.patient-dashboard .appointment-card,
+.patient-dashboard .prescription-card,
+.patient-dashboard .report-card,
+.patient-dashboard .bill-card {
+  text-align: center;
+  font-size: 14px;
+}
+
+.patient-dashboard .section-header,
+.patient-dashboard .card-header,
+.patient-dashboard .profile-section .section-header {
+  align-items: center;
+}
+
+.patient-dashboard .section-header h2,
+.patient-dashboard .appointments-section .section-header h2,
+.patient-dashboard .prescriptions-section h2,
+.patient-dashboard .reports-section h2,
+.patient-dashboard .bills-section h2,
+.patient-dashboard .settings-section > h2,
+.patient-dashboard .profile-section .section-header h3,
+.patient-dashboard .overview-card h3 {
+  font-size: 30px;
+  line-height: 1.15;
+}
+
+.patient-dashboard .card-body p,
+.patient-dashboard .activity-details p,
+.patient-dashboard .apt-details p,
+.patient-dashboard .no-data,
+.patient-dashboard .no-data-card p {
+  text-align: center;
+  font-size: 13px;
+}
+
+.patient-dashboard table th,
+.patient-dashboard table td {
+  text-align: center;
+  vertical-align: middle;
+  font-size: 13px;
+}
+
+.patient-dashboard .no-data,
+.patient-dashboard .no-data-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 
