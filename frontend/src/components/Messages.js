@@ -163,20 +163,20 @@ const Messages = () => {
         <div className="messages-sidebar">
           <div className="message-tabs">
             <button 
-              className={activeTab === 'inbox' ? 'active' : ''}
+              className={`messages-tab ${activeTab === 'inbox' ? 'active' : ''}`}
               onClick={() => setActiveTab('inbox')}
             >
               <FaEnvelope /> Inbox
               {unreadCount > 0 && <span className="tab-badge">{unreadCount}</span>}
             </button>
             <button 
-              className={activeTab === 'sent' ? 'active' : ''}
+              className={`messages-tab ${activeTab === 'sent' ? 'active' : ''}`}
               onClick={() => setActiveTab('sent')}
             >
               <FaEnvelopeOpen /> Sent
             </button>
             <button 
-              className={activeTab === 'contacts' ? 'active' : ''}
+              className={`messages-tab ${activeTab === 'contacts' ? 'active' : ''}`}
               onClick={() => setActiveTab('contacts')}
             >
               <FaUser /> Contacts
