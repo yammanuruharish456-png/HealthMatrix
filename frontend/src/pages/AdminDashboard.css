@@ -879,4 +879,175 @@ tbody tr:hover {
   border: 1px solid #b7cfe6;
 }
 
+/* Final module styling: align admin modules with patient dashboard visuals */
+.admin-dashboard {
+  background: linear-gradient(135deg, #0d1b2a 0%, #1a2332 50%, #0f1419 100%);
+}
+
+.admin-dashboard .dashboard-header {
+  background: linear-gradient(135deg, #2D9CDB 0%, #1E6BA8 50%, #0E4C92 100%);
+  border-radius: 0;
+  box-shadow: 0 10px 40px rgba(45, 156, 219, 0.3);
+  padding: 40px 0;
+}
+
+.admin-dashboard .container {
+  max-width: 1200px;
+}
+
+.admin-dashboard .dashboard-tabs {
+  background: #ffffff;
+  border: 1px solid #e6edf5;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.admin-dashboard .dashboard-tabs button {
+  background: #f0f2f5;
+  border: 2px solid transparent;
+  color: #555;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.admin-dashboard .dashboard-tabs button:hover {
+  background: #e8eaed;
+  transform: translateY(-2px);
+}
+
+.admin-dashboard .dashboard-tabs button.active {
+  background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+  color: #fff;
+  border-color: #00d4ff;
+}
+
+.admin-dashboard .overview-section,
+.admin-dashboard .pending-section,
+.admin-dashboard .doctors-section,
+.admin-dashboard .appointments-section,
+.admin-dashboard .staff-section,
+.admin-dashboard .contacts-section,
+.admin-dashboard .callbacks-section {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.admin-dashboard .recent-section,
+.admin-dashboard .section,
+.admin-dashboard .pending-card,
+.admin-dashboard .callback-card,
+.admin-dashboard .contact-card,
+.admin-dashboard .modal-content {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.admin-dashboard .pending-card:hover,
+.admin-dashboard .callback-card:hover,
+.admin-dashboard .contact-card:hover {
+  transform: translateY(-4px);
+  border-color: #00d4ff;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.admin-dashboard .section-header {
+  border-bottom: 2px solid #e8eaed;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+}
+
+.admin-dashboard .section-header h2,
+.admin-dashboard .pending-section h2,
+.admin-dashboard .appointments-section h2,
+.admin-dashboard .contacts-section h2,
+.admin-dashboard .callbacks-section h2,
+.admin-dashboard .staff-section h2,
+.admin-dashboard .doctors-section h2 {
+  color: #333;
+}
+
+.admin-dashboard table {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.admin-dashboard thead {
+  background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+}
+
+.admin-dashboard th {
+  color: #ffffff;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 14px;
+}
+
+.admin-dashboard td {
+  color: #666;
+  border-bottom: 1px solid #e8eaed;
+}
+
+.admin-dashboard tbody tr:hover {
+  background: #f8fafc;
+  transform: none;
+  box-shadow: none;
+}
+
+.admin-dashboard .btn-primary {
+  background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+  border-radius: 8px;
+}
+
+.admin-dashboard .btn-secondary {
+  background: #e8eaed;
+  border-radius: 8px;
+}
+
+.admin-dashboard .btn-icon {
+  color: #00a7d6;
+  background: #f0f4f8;
+  border: 1px solid #d6e3f0;
+}
+
+.admin-dashboard .form-group input,
+.admin-dashboard .form-group select,
+.admin-dashboard .form-group textarea {
+  border: 1px solid #d7e2ed;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.admin-dashboard .form-group input:focus,
+.admin-dashboard .form-group select:focus,
+.admin-dashboard .form-group textarea:focus {
+  border-color: #00d4ff;
+  box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  .admin-dashboard .overview-section,
+  .admin-dashboard .pending-section,
+  .admin-dashboard .doctors-section,
+  .admin-dashboard .appointments-section,
+  .admin-dashboard .staff-section,
+  .admin-dashboard .contacts-section,
+  .admin-dashboard .callbacks-section {
+    padding: 18px;
+  }
+
+  .admin-dashboard table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
 
