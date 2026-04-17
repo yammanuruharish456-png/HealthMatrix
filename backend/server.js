@@ -59,7 +59,20 @@ app.use('/api/nurse', require('./routes/nurse'));
 
 // Health check
 app.get('/api/health', (req, res) => {
-  res.json({ status: 'OK', message: 'Health Matrix Hospital API is running' });
+  const dbStateMap = {
+    0: 'disconnected',
+    1: 'connected',
+    2: 'connecting',
+    3: 'disconnecting'
+  };
+
+  const dbState = dbStateMap[mongoose.connection.readyState] || 'unknown';
+
+  res.json({
+    status: 'OK',
+    message: 'Health Matrix Hospital API is running',
+    database: dbState
+  });
 });
 
 // Serve React build from the backend in production.

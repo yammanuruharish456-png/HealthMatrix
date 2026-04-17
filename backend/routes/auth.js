@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const jwt = require('jsonwebtoken');
+const mongoose = require('mongoose');
 const { OAuth2Client } = require('google-auth-library');
 const User = require('../models/User');
 const Doctor = require('../models/Doctor');
@@ -19,6 +20,17 @@ const generateToken = (id) => {
 
 const generateOTP = () => {
   return Math.floor(100000 + Math.random() * 900000).toString();
+};
+
+const ensureDatabaseConnected = (res) => {
+  if (mongoose.connection.readyState !== 1) {
+    res.status(503).json({
+      message: 'Database is temporarily unavailable. Please try again in a moment.'
+    });
+    return false;
+  }
+
+  return true;
 };
 
 // Register
@@ -151,6 +163,8 @@ router.post('/staff-register', async (req, res) => {
 // Patient Login - Send OTP
 router.post('/patient-login-otp', async (req, res) => {
   try {
+    if (!ensureDatabaseConnected(res)) return;
+
     const { email } = req.body;
 
     if (!email) {
@@ -189,6 +203,8 @@ router.post('/patient-login-otp', async (req, res) => {
 // Patient Login - Verify OTP
 router.post('/patient-verify-otp', async (req, res) => {
   try {
+    if (!ensureDatabaseConnected(res)) return;
+
     const { email, otp } = req.body;
 
     if (!email || !otp) {
@@ -239,6 +255,8 @@ router.post('/patient-verify-otp', async (req, res) => {
 // Login (for other roles)
 router.post('/login', async (req, res) => {
   try {
+    if (!ensureDatabaseConnected(res)) return;
+
     const { email, password } = req.body;
 
     if (!email || !password) {
@@ -281,6 +299,8 @@ router.post('/login', async (req, res) => {
 // Google Login (all supported roles)
 router.post('/google-login', async (req, res) => {
   try {
+    if (!ensureDatabaseConnected(res)) return;
+
     const { credential, role } = req.body;
 
     if (!credential || !role) {
@@ -360,7 +380,9 @@ router.post('/google-login', async (req, res) => {
 
     let message = 'Google Sign-In failed. Please try again.';
 
-    if (/wrong recipient|audience|aud/i.test(rawMessage)) {
+    if (/buffering timed out|topology was destroyed|not connected|mongo/i.test(rawMessage)) {
+      message = 'Database is temporarily unavailable. Please try again in a moment.';
+    } else if (/wrong recipient|audience|aud/i.test(rawMessage)) {
       message = 'Google Client ID mismatch. Check OAuth client ID in frontend and backend env files.';
     } else if (/origin|origin_mismatch/i.test(rawMessage)) {
       message = 'Google OAuth origin mismatch. Add the exact frontend URL in Authorized JavaScript origins.';
