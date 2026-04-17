@@ -6,3 +6,21 @@ services:
     buildCommand: npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend
     startCommand: npm --prefix backend start
     autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: GOOGLE_CLIENT_ID
+        sync: false
+      - key: GOOGLE_CLIENT_SECRET
+        sync: false
+      - key: REACT_APP_GOOGLE_CLIENT_ID
+        sync: false
+      - key: FRONTEND_URL
+        value: https://healthmatrix-c6vz.onrender.com
+      - key: OPENROUTER_API_KEY
+        value: ""
+
