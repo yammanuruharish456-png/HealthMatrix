@@ -541,7 +541,7 @@ const AdminDashboard = () => {
 
         {activeTab === 'doctors' && (
           <div className="doctors-section">
-            <div className="section-header">
+            <div className="section-header section-header-doctors">
               <h2>Manage Doctors</h2>
               <button onClick={() => setShowDoctorForm(true)} className="btn-primary">
                 <FaPlus /> Add Doctor
