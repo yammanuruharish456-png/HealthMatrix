@@ -1050,4 +1050,307 @@ tbody tr:hover {
   }
 }
 
+/* Patient-style admin revamp (final authoritative layer) */
+.admin-dashboard {
+  background: linear-gradient(135deg, #0d1b2a 0%, #1a2332 50%, #0f1419 100%);
+  min-height: 100vh;
+}
+
+.admin-dashboard::before {
+  display: none;
+}
+
+.admin-dashboard .dashboard-header {
+  margin-bottom: 40px;
+  border-radius: 0;
+  background: linear-gradient(135deg, #2D9CDB 0%, #1E6BA8 50%, #0E4C92 100%);
+  box-shadow: 0 10px 40px rgba(45, 156, 219, 0.3);
+  position: static;
+  padding: 40px 0;
+}
+
+.admin-dashboard .header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-dashboard .user-info h1 {
+  font-size: 32px;
+  line-height: 1.15;
+  margin-bottom: 5px;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+.admin-dashboard .user-info p {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.admin-dashboard .header-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.admin-dashboard .dashboard-tabs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+  padding: 20px;
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1px solid #e6edf5;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  position: static;
+}
+
+.admin-dashboard .dashboard-tabs button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid #dce5f0;
+  background: #f5f7fb;
+  color: #4b5563;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.admin-dashboard .dashboard-tabs button svg {
+  font-size: 13px;
+}
+
+.admin-dashboard .dashboard-tabs button:hover {
+  background: #e9eef5;
+  transform: translateY(-2px);
+}
+
+.admin-dashboard .dashboard-tabs button.active {
+  border-color: #1f6eb0;
+  color: #ffffff;
+  background: linear-gradient(135deg, #2D7FD3 0%, #1E5F9A 100%);
+}
+
+.admin-dashboard .dashboard-content {
+  background: #ffffff;
+  border: 1px solid #dbe5f1;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  margin-bottom: 28px;
+}
+
+.admin-dashboard .overview-section,
+.admin-dashboard .pending-section,
+.admin-dashboard .doctors-section,
+.admin-dashboard .appointments-section,
+.admin-dashboard .staff-section,
+.admin-dashboard .contacts-section,
+.admin-dashboard .callbacks-section {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+.admin-dashboard .recent-section,
+.admin-dashboard .section,
+.admin-dashboard .pending-card,
+.admin-dashboard .callback-card,
+.admin-dashboard .contact-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.admin-dashboard .stat-card {
+  background: linear-gradient(135deg, #00d4ff 0%, #0099cc 50%, #006699 100%);
+  border: none;
+  box-shadow: 0 8px 20px rgba(0, 212, 255, 0.3);
+}
+
+.admin-dashboard .stat-card h3,
+.admin-dashboard .stat-card p,
+.admin-dashboard .stat-card svg {
+  color: #ffffff;
+}
+
+.admin-dashboard .section-header {
+  justify-content: space-between;
+  border-bottom: 2px solid #e8eaed;
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+}
+
+.admin-dashboard .section-header:not(.section-header-doctors) {
+  justify-content: center;
+}
+
+.admin-dashboard .section-header:not(.section-header-doctors) h2 {
+  margin: 0 auto;
+}
+
+.admin-dashboard .section-header-doctors {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 12px;
+}
+
+.admin-dashboard .section-header-doctors h2 {
+  justify-self: start;
+  grid-column: 1;
+  text-align: left;
+}
+
+.admin-dashboard .section-header-doctors .btn-primary {
+  grid-column: 2;
+  justify-self: end;
+  font-size: 13px;
+  padding: 10px 14px;
+}
+
+.admin-dashboard .section-header h2,
+.admin-dashboard .pending-section h2,
+.admin-dashboard .appointments-section h2,
+.admin-dashboard .contacts-section h2,
+.admin-dashboard .callbacks-section h2,
+.admin-dashboard .staff-section h2,
+.admin-dashboard .doctors-section h2,
+.admin-dashboard .recent-section h2 {
+  color: #333;
+  text-align: center;
+}
+
+.admin-dashboard table {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.admin-dashboard thead {
+  background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+}
+
+.admin-dashboard th {
+  color: #ffffff;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 14px;
+}
+
+.admin-dashboard td,
+.admin-dashboard p,
+.admin-dashboard label {
+  color: #475569;
+}
+
+.admin-dashboard tbody tr:hover {
+  background: #f8fafc;
+  transform: none;
+  box-shadow: none;
+}
+
+.admin-dashboard .btn-primary,
+.admin-dashboard .btn-secondary,
+.admin-dashboard .btn-sm,
+.admin-dashboard .btn-icon,
+.admin-dashboard .btn-verify,
+.admin-dashboard .btn-approve,
+.admin-dashboard .btn-reject,
+.admin-dashboard .btn-logout,
+.admin-dashboard .btn-confirm,
+.admin-dashboard .btn-success {
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.admin-dashboard .btn-primary,
+.admin-dashboard .btn-verify,
+.admin-dashboard .btn-success {
+  background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+  color: #ffffff;
+}
+
+.admin-dashboard .btn-approve,
+.admin-dashboard .btn-confirm {
+  background: linear-gradient(135deg, #1f8a70 0%, #146356 100%);
+  color: #ffffff;
+}
+
+.admin-dashboard .btn-reject,
+.admin-dashboard .btn-logout {
+  background: linear-gradient(135deg, #d63031 0%, #a4133c 100%);
+  color: #ffffff;
+}
+
+.admin-dashboard .btn-icon {
+  border: 1px solid #d9e3ef;
+  background: #f5f8fc;
+  color: #3f78b1;
+}
+
+.admin-dashboard .form-group input,
+.admin-dashboard .form-group select,
+.admin-dashboard .form-group textarea {
+  background: #ffffff;
+  border: 1px solid #d7e2ed;
+  border-radius: 8px;
+}
+
+.admin-dashboard .form-group input:focus,
+.admin-dashboard .form-group select:focus,
+.admin-dashboard .form-group textarea:focus {
+  border-color: #00d4ff;
+  box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.1);
+}
+
+.admin-dashboard .modal-content {
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.admin-dashboard .no-data {
+  background: #f8fafc;
+  color: #64748b;
+  border: 2px dashed #d1dbe7;
+}
+
+@media (max-width: 768px) {
+  .admin-dashboard .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .admin-dashboard .dashboard-content {
+    padding: 18px;
+  }
+
+  .admin-dashboard .dashboard-tabs {
+    flex-direction: column;
+  }
+
+  .admin-dashboard .dashboard-tabs button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .admin-dashboard .section-header-doctors {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-dashboard .section-header-doctors h2,
+  .admin-dashboard .section-header-doctors .btn-primary {
+    justify-self: center;
+  }
+}
+
 

@@ -343,22 +343,26 @@ const AdminDashboard = () => {
   return (
     <div className="admin-dashboard">
       <div className="dashboard-header">
-        <div className="container" style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
-          <div>
+        <div className="container">
+          <div className="header-content">
+            <div className="user-info">
             <h1>Admin Dashboard</h1>
             <p>Welcome, {user?.name}</p>
+            </div>
+            <div className="header-actions">
+              <button 
+                onClick={() => {
+                  localStorage.removeItem('token');
+                  localStorage.removeItem('user');
+                  navigate('/admin-login');
+                  toast.success('Logged out successfully');
+                }}
+                className="btn-logout"
+              >
+                <FaSignOutAlt /> Logout
+              </button>
+            </div>
           </div>
-          <button 
-            onClick={() => {
-              localStorage.removeItem('token');
-              localStorage.removeItem('user');
-              navigate('/admin-login');
-              toast.success('Logged out successfully');
-            }}
-            className="btn-logout"
-          >
-            <FaSignOutAlt /> Logout
-          </button>
         </div>
       </div>
 
@@ -368,64 +372,65 @@ const AdminDashboard = () => {
             className={activeTab === 'overview' ? 'active' : ''} 
             onClick={() => setActiveTab('overview')}
           >
-            Overview
+            <FaUsers /> Overview
           </button>
           <button 
             className={activeTab === 'pending' ? 'active' : ''} 
             onClick={() => setActiveTab('pending')}
           >
-            Pending Doctors ({pendingDoctors.length})
+            <FaCheckCircle /> Pending Doctors ({pendingDoctors.length})
           </button>
           <button 
             className={activeTab === 'staff' ? 'active' : ''} 
             onClick={() => setActiveTab('staff')}
           >
-            Pending Staff ({pendingStaff.length})
+            <FaCheckCircle /> Pending Staff ({pendingStaff.length})
           </button>
           <button 
             className={activeTab === 'doctors' ? 'active' : ''} 
             onClick={() => setActiveTab('doctors')}
           >
-            Doctors
+            <FaUserMd /> Doctors
           </button>
           <button 
             className={activeTab === 'appointments' ? 'active' : ''} 
             onClick={() => setActiveTab('appointments')}
           >
-            Appointments
+            <FaCalendarAlt /> Appointments
           </button>
           <button 
             className={activeTab === 'contacts' ? 'active' : ''} 
             onClick={() => setActiveTab('contacts')}
           >
-            Contact Inquiries
+            <FaEnvelope /> Contact Inquiries
           </button>
           <button 
             className={activeTab === 'callbacks' ? 'active' : ''} 
             onClick={() => setActiveTab('callbacks')}
           >
-            Callback Requests ({callbacks.length})
+            <FaEnvelope /> Callback Requests ({callbacks.length})
           </button>
           <button 
             className={activeTab === 'users' ? 'active' : ''} 
             onClick={() => setActiveTab('users')}
           >
-            User Accounts ({users.length})
+            <FaUsers /> User Accounts ({users.length})
           </button>
           <button 
             className={activeTab === 'departments' ? 'active' : ''} 
             onClick={() => setActiveTab('departments')}
           >
-            Departments ({specialties.length})
+            <FaEdit /> Departments ({specialties.length})
           </button>
           <button 
             className={activeTab === 'configuration' ? 'active' : ''} 
             onClick={() => setActiveTab('configuration')}
           >
-            System Config
+            <FaEdit /> System Config
           </button>
         </div>
 
+        <div className="dashboard-content">
         {activeTab === 'overview' && (
           <div className="overview-section">
             <div className="stats-grid">
@@ -940,6 +945,7 @@ const AdminDashboard = () => {
             )}
           </div>
         )}
+        </div>
       </div>
 
       {showDoctorForm && (

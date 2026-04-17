@@ -398,7 +398,11 @@ const PatientDashboard = () => {
               
               {appointments.length === 0 ? (
                 <div className="no-data-card">
-                  <p>You don't have any appointments yet.</p>
+                  <div className="empty-state-icon">
+                    <FaCalendar />
+                  </div>
+                  <h3 className="empty-state-title">No appointments scheduled</h3>
+                  <p>You don't have any appointments yet. Start by booking your first consultation.</p>
                   <button onClick={() => navigate('/appointment')} className="btn-primary">
                     Book Your First Appointment
                   </button>
