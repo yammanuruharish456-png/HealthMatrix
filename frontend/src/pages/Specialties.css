@@ -1,0 +1,83 @@
+.specialties-page {
+  padding-bottom: 60px;
+}
+
+.specialties-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+  margin: 40px 0;
+}
+
+.specialty-detail-card {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s;
+}
+
+.specialty-detail-card:hover {
+  box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+  transform: translateY(-5px);
+}
+
+.specialty-icon {
+  font-size: 64px;
+  color: #0066cc;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.specialty-detail-card h3 {
+  font-size: 26px;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.specialty-detail-card > p {
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.services-list {
+  margin: 20px 0;
+}
+
+.services-list h4 {
+  font-size: 18px;
+  color: #0066cc;
+  margin-bottom: 10px;
+}
+
+.services-list ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.services-list li {
+  padding: 8px 0;
+  color: #666;
+  border-bottom: 1px solid #eee;
+}
+
+.services-list li:before {
+  content: "✓ ";
+  color: #28a745;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.specialty-detail-card .btn-secondary {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .specialties-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,288 @@
+.medical-history {
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.history-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e8eaed;
+  flex-wrap: wrap;
+}
+
+.history-tab {
+  padding: 12px 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  color: #666;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.history-tab:hover {
+  color: #667eea;
+}
+
+.history-tab.active {
+  color: #667eea;
+  border-bottom-color: #667eea;
+}
+
+.history-item {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  border-left: 4px solid #667eea;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.history-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.history-item h4 {
+  margin: 0 0 10px 0;
+  color: #333;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.history-item p {
+  margin: 5px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.severity-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.severity-high {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.severity-medium {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.severity-low {
+  background: #d4edda;
+  color: #155724;
+}
+
+.btn-add {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+
+.btn-add:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(67, 233, 123, 0.3);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content h3 {
+  margin-top: 0;
+  color: #333;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.btn-cancel {
+  background: #e8eaed;
+  color: #333;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-cancel:hover {
+  background: #ddd;
+}
+
+.btn-submit {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(102, 126, 234, 0.3);
+}
+
+/* Module UI upgrade */
+.medical-history {
+  border: 1px solid #d5e5f7;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fcff 100%);
+}
+
+.history-tabs {
+  background: linear-gradient(180deg, #f9fcff 0%, #f2f7fd 100%);
+  border: 1px solid #dae8f8;
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.history-tab {
+  border-radius: 10px;
+}
+
+.history-tab.active {
+  background: linear-gradient(135deg, #0ea8d8 0%, #1f67b7 100%);
+  color: #fff;
+}
+
+.history-item {
+  border-radius: 12px;
+  border-left-width: 5px;
+}
+
+.btn-add,
+.btn-cancel,
+.btn-submit {
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  border-radius: 10px;
+  border: 1px solid #cfdff2;
+  background: #fbfdff;
+}
+
+/* Unified clinical module theme */
+.medical-history,
+.history-item,
+.modal-content {
+  background: linear-gradient(100deg, #f5f9fd 0%, #edf3fa 52%, #e9f1f8 100%);
+  border: 1px solid #cfe0f2;
+  box-shadow: 0 8px 22px rgba(23, 74, 121, 0.1);
+}
+
+.history-tabs {
+  border: 1px solid #cfe0f2;
+}
+
+.history-tab.active,
+.btn-submit,
+.btn-add {
+  background: linear-gradient(135deg, #1f5f99 0%, #184b7c 100%);
+  color: #fff;
+}
+
+.history-item h4,
+.history-item p,
+.medical-history label,
+.medical-history h3,
+.medical-history h4,
+.medical-history p {
+  color: #184b7c;
+}
+
+

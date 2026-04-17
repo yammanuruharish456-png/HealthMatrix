@@ -1,0 +1,9 @@
+src/components/Footer.js
+src/pages/Home.js
+src/components/Chatbot.js
+src/context/AuthContext.js
+src/pages/AdminDashboard.js
+src/pages/DoctorDetail.js
+src/pages/Doctors.js
+src/pages/LabTechnicianDashboard.js
+src/pages/ReceptionistDashboard.js

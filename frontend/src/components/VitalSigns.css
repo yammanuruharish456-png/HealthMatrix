@@ -1,0 +1,341 @@
+.vital-signs {
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.vitals-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e8eaed;
+  flex-wrap: wrap;
+}
+
+.vitals-tab {
+  padding: 12px 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  color: #666;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.vitals-tab:hover {
+  color: #667eea;
+}
+
+.vitals-tab.active {
+  color: #667eea;
+  border-bottom-color: #667eea;
+}
+
+.vitals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.vital-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.vital-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(102, 126, 234, 0.4);
+}
+
+.vital-icon {
+  font-size: 32px;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+.vital-label {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 13px;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.vital-value {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.vital-unit {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 12px;
+}
+
+.vital-status {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.status-normal {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-warning {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status-critical {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.vitals-history {
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.history-item {
+  padding: 12px;
+  border-bottom: 1px solid #e8eaed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.history-item:hover {
+  background: #f8f9fa;
+}
+
+.history-item:last-child {
+  border-bottom: none;
+}
+
+.history-date {
+  color: #666;
+  font-weight: 600;
+}
+
+.history-values {
+  color: #333;
+  font-weight: 600;
+}
+
+.btn-record {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+
+.btn-record:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(67, 233, 123, 0.3);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content h3 {
+  margin-top: 0;
+  color: #333;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.btn-cancel {
+  background: #e8eaed;
+  color: #333;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-cancel:hover {
+  background: #ddd;
+}
+
+.btn-submit {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(102, 126, 234, 0.3);
+}
+
+/* Module UI upgrade */
+.vital-signs {
+  border: 1px solid #d5e5f7;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fcff 100%);
+}
+
+.vitals-tabs {
+  background: linear-gradient(180deg, #f9fcff 0%, #f2f7fd 100%);
+  border: 1px solid #dae8f8;
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.vitals-tab {
+  border-radius: 10px;
+}
+
+.vitals-tab.active {
+  background: linear-gradient(135deg, #0ea8d8 0%, #1f67b7 100%);
+  color: #fff;
+}
+
+.vital-card {
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: 14px;
+}
+
+.btn-record,
+.btn-cancel,
+.btn-submit {
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.form-group input,
+.form-group select {
+  border-radius: 10px;
+  border: 1px solid #cfdff2;
+  background: #fbfdff;
+}
+
+/* Unified clinical module theme */
+.vital-signs,
+.vitals-history,
+.history-item,
+.modal-content {
+  background: linear-gradient(100deg, #f5f9fd 0%, #edf3fa 52%, #e9f1f8 100%);
+  border: 1px solid #cfe0f2;
+  box-shadow: 0 8px 22px rgba(23, 74, 121, 0.1);
+}
+
+.vitals-tabs {
+  border: 1px solid #cfe0f2;
+}
+
+.vitals-tab.active,
+.btn-submit,
+.btn-record {
+  background: linear-gradient(135deg, #1f5f99 0%, #184b7c 100%);
+  color: #fff;
+}
+
+.vital-card {
+  background: linear-gradient(135deg, #2f79b8 0%, #1e5f99 100%);
+}
+
+.vital-signs h3,
+.vital-signs h4,
+.vital-signs p,
+.vital-signs label,
+.vital-signs span,
+.vital-signs .history-date,
+.vital-signs .history-values {
+  color: #184b7c;
+}
+
+

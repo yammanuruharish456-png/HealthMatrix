@@ -1,0 +1,417 @@
+/* Professional readability and visual consistency layer */
+
+html,
+body {
+    min-height: 100%;
+}
+
+#root,
+.App {
+    min-height: 100vh;
+}
+
+body {
+    color: var(--text);
+    letter-spacing: 0.01em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--dark);
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+}
+
+p,
+li,
+label,
+td,
+th {
+    color: var(--text);
+}
+
+small,
+.text-muted {
+    color: var(--text-soft);
+}
+
+a {
+    color: var(--primary-dark);
+}
+
+a:hover {
+    color: var(--primary);
+}
+
+.page-header h1,
+.dashboard-header h1,
+.emergency-banner h1 {
+    letter-spacing: -0.02em;
+}
+
+.page-header p,
+.dashboard-header p,
+.emergency-banner p {
+    opacity: 0.98;
+}
+
+:where(.auth-card,
+    .appointment-form-container,
+    .doctor-card,
+    .doctor-profile,
+    .specialty-detail-card,
+    .service-card,
+    .service-category,
+    .feature-card,
+    .situation-card,
+    .achievement,
+    .value,
+    .section,
+    .recent-section,
+    .appointments-section,
+    .reports-section,
+    .doctors-section,
+    .contacts-section,
+    .pending-section,
+    .overview-card,
+    .settings-card,
+    .report-card,
+    .bill-card,
+    .prescription-card,
+    .appointment-card,
+    .modal-content,
+    .contact-card,
+    .dashboard-content,
+    .dashboard-card,
+    .action-card,
+    .specialty-card,
+    .feature,
+    .doctor-schedule-container) {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+}
+
+:where(.doctor-card,
+    .specialty-detail-card,
+    .service-card,
+    .action-card,
+    .specialty-card,
+    .feature,
+    .appointment-card,
+    .report-card,
+    .bill-card,
+    .prescription-card,
+    .dashboard-card,
+    .contact-card,
+    .stat-card):hover {
+    box-shadow: var(--shadow-md);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea,
+.appointment-form input,
+.appointment-form select,
+.appointment-form textarea,
+.contact-form input,
+.contact-form textarea,
+.search-box input,
+.search-section select,
+.chatbot-input input,
+.time-input input,
+.time-input select,
+.medication-item input {
+    color: var(--dark);
+    background: #fff;
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus,
+.appointment-form input:focus,
+.appointment-form select:focus,
+.appointment-form textarea:focus,
+.contact-form input:focus,
+.contact-form textarea:focus,
+.search-box input:focus,
+.search-section select:focus,
+.chatbot-input input:focus,
+.time-input input:focus,
+.time-input select:focus,
+.medication-item input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px var(--ring);
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #64748b;
+}
+
+:where(button, .btn-primary, .btn-secondary, .btn-sm, .dashboard-btn, .appointment-btn) {
+    font-family: inherit;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+}
+
+.btn-primary,
+.appointment-btn,
+.dashboard-btn,
+.btn-complete,
+.view-all-btn,
+.btn-print,
+.chatbot-input button {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: #fff;
+    border: none;
+}
+
+.btn-secondary,
+.btn-download,
+.btn-save,
+.btn-confirm,
+.btn-add,
+.btn-approve,
+.btn-verify,
+.action-btn {
+    background: linear-gradient(135deg, var(--success) 0%, #166534 100%);
+    color: #fff;
+    border: none;
+}
+
+.btn-cancel,
+.btn-remove,
+.btn-reject,
+.logout-btn {
+    background: linear-gradient(135deg, var(--danger) 0%, #991b1b 100%);
+    color: #fff;
+    border: none;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn-download:hover,
+.btn-save:hover,
+.btn-confirm:hover,
+.btn-complete:hover,
+.btn-cancel:hover,
+.btn-remove:hover,
+.btn-reject:hover,
+.btn-add:hover,
+.btn-approve:hover,
+.btn-verify:hover,
+.action-btn:hover,
+.view-all-btn:hover,
+.appointment-btn:hover,
+.logout-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-icon {
+    color: var(--text-soft);
+}
+
+.btn-icon:hover {
+    color: var(--primary);
+}
+
+table,
+.dashboard-table {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table thead,
+.dashboard-table thead,
+.appointments-table thead {
+    background: #edf3ff;
+}
+
+table th,
+.dashboard-table th,
+.appointments-table th {
+    color: var(--dark);
+    font-weight: 700;
+}
+
+table td,
+.dashboard-table td,
+.appointments-table td {
+    color: var(--text);
+}
+
+table tbody tr:nth-child(even),
+.dashboard-table tbody tr:nth-child(even),
+.appointments-table tbody tr:nth-child(even) {
+    background: #fafcff;
+}
+
+table tbody tr:hover,
+.dashboard-table tbody tr:hover,
+.appointments-table tbody tr:hover {
+    background: #eef4ff;
+}
+
+.tabs,
+.dashboard-tabs {
+    border-bottom: 2px solid var(--border);
+}
+
+.tabs button,
+.dashboard-tabs button,
+.tab-btn,
+.dashboard-nav button {
+    color: var(--text-soft);
+    font-weight: 600;
+}
+
+.tabs button:hover,
+.dashboard-tabs button:hover,
+.tab-btn:hover,
+.dashboard-nav button:hover {
+    color: var(--primary);
+}
+
+.tabs button.active,
+.dashboard-tabs button.active,
+.tab-btn.active {
+    color: var(--primary);
+    border-bottom-color: var(--primary);
+}
+
+.status,
+[class*='status-'] {
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.status.pending,
+.status-pending {
+    background: #fff7ed;
+    color: #9a3412;
+    border: 1px solid #fed7aa;
+}
+
+.status.confirmed,
+.status-confirmed {
+    background: #e0f2fe;
+    color: #075985;
+    border: 1px solid #bae6fd;
+}
+
+.status.completed,
+.status-completed {
+    background: #dcfce7;
+    color: #166534;
+    border: 1px solid #bbf7d0;
+}
+
+.status.cancelled,
+.status-cancelled {
+    background: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+}
+
+.no-data,
+.empty-state,
+.no-data-card,
+.no-appointments {
+    background: #f8fbff;
+    color: var(--text-soft);
+    border: 1px dashed var(--border);
+    border-radius: var(--radius);
+}
+
+.slide::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg,
+            rgba(15, 23, 42, 0.58) 0%,
+            rgba(30, 58, 138, 0.3) 52%,
+            rgba(15, 23, 42, 0.55) 100%);
+}
+
+.slide-content {
+    z-index: 3;
+}
+
+.slide-content h2,
+.slide-content p {
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.5);
+}
+
+.chatbot-window {
+    border: 1px solid var(--border);
+}
+
+.chatbot-messages {
+    background: #f5f8ff;
+}
+
+.message-text {
+    color: var(--text);
+    border: 1px solid #e5ecfa;
+}
+
+.message.user .message-text {
+    border-color: transparent;
+}
+
+.suggestion-btn {
+    border-color: var(--primary);
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.suggestion-btn:hover {
+    background: var(--primary);
+    color: #fff;
+}
+
+.footer-section p,
+.footer-section ul li a,
+.contact-list li,
+.footer-bottom,
+.footer-bottom a {
+    color: #d4dbe7;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid rgba(29, 78, 216, 0.35);
+    outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+
+    .section,
+    .recent-section,
+    .appointments-section,
+    .reports-section,
+    .doctors-section,
+    .contacts-section,
+    .pending-section,
+    .dashboard-content,
+    .appointment-form-container {
+        padding: 20px;
+    }
+
+    .chatbot-toggle {
+        width: 56px;
+        height: 56px;
+    }
+}

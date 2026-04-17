@@ -1,0 +1,112 @@
+.doctor-detail-page {
+  padding: 60px 0;
+}
+
+.doctor-profile {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 20px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.profile-header {
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.profile-header img {
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.profile-info h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.profile-info .specialization {
+  font-size: 20px;
+  color: #0066cc;
+  margin-bottom: 15px;
+}
+
+.profile-info .rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffa500;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.profile-details {
+  padding: 40px;
+}
+
+.detail-section {
+  margin-bottom: 40px;
+}
+
+.detail-section h3 {
+  font-size: 24px;
+  color: #0066cc;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #0066cc;
+  padding-bottom: 10px;
+}
+
+.qualifications {
+  list-style: none;
+}
+
+.qualifications li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  color: #666;
+}
+
+.qualifications svg {
+  color: #0066cc;
+}
+
+.reviews {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.review {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #0066cc;
+}
+
+.review-rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #ffa500;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.review-date {
+  font-size: 14px;
+  color: #999;
+}
+
+@media (max-width: 768px) {
+  .profile-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
