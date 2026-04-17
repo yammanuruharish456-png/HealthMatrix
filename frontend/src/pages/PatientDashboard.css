@@ -1551,4 +1551,21 @@
   justify-content: center;
 }
 
+/* Final unified patient module header style */
+.patient-dashboard .appointments-section .section-header h2,
+.patient-dashboard .prescriptions-section h2,
+.patient-dashboard .reports-section h2,
+.patient-dashboard .bills-section h2,
+.patient-dashboard .settings-section > h2,
+.patient-dashboard .profile-section .section-header h3,
+.patient-dashboard .account-actions h3,
+.patient-dashboard .overview-card h3 {
+  text-align: center;
+  font-family: 'Segoe UI Variable', 'Nunito Sans', 'Segoe UI', Tahoma, sans-serif;
+  font-size: 32px;
+  line-height: 1.15;
+  font-weight: 800;
+  color: #1a456b;
+}
+
 
