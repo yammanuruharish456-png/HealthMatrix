@@ -205,8 +205,8 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 .doctor-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-xl);overflow:hidden;transition:all var(--transition);cursor:pointer}
 .doctor-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
 .doctor-img-wrap{height:220px;overflow:hidden;position:relative;background:#edf2f5;display:flex;align-items:center;justify-content:center}
-.doctor-img-wrap img{width:100%;height:100%;object-fit:contain;object-position:center center;transition:transform 0.3s ease}
-.doctor-card:hover .doctor-img-wrap img{transform:none}
+.doctor-img-wrap img{width:100%;height:100%;object-fit:cover;object-position:center center;transform:scale(1.12);transition:transform 0.3s ease}
+.doctor-card:hover .doctor-img-wrap img{transform:scale(1.16)}
 .doctor-badge{position:absolute;top:14px;left:14px;background:rgba(21,132,148,0.9);backdrop-filter:blur(6px);color:#fff;font-size:11px;font-weight:700;padding:5px 10px;border-radius:100px;letter-spacing:0.4px}
 .doctor-info{padding:24px}
 .doctor-name{font-family:var(--font-display);font-size:17px;font-weight:700;margin-bottom:4px}
