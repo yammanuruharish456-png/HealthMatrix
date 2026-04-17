@@ -1608,4 +1608,15 @@ tbody tr:hover {
   }
 }
 
+/* User-requested exact add button size */
+.admin-dashboard .section-header-doctors .btn-primary {
+  grid-column: 3;
+  justify-self: end;
+  width: 5px !important;
+  height: 5px !important;
+  min-height: 5px !important;
+  padding: 0 !important;
+  overflow: hidden;
+}
+
 
