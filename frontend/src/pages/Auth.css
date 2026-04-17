@@ -6,7 +6,7 @@
   padding: 48px 20px;
   background:
     linear-gradient(rgba(7, 26, 34, 0.62), rgba(7, 26, 34, 0.62)),
-    url('/login-bg.jpg') center center / cover no-repeat;
+    url('../assets/login-bg.jpg') center center / cover no-repeat;
   background-color: #0b2731;
 }
 
