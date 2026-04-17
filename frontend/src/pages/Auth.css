@@ -5,9 +5,9 @@
   justify-content: center;
   padding: 48px 20px;
   background:
-    radial-gradient(circle at 20% 20%, rgba(59, 188, 208, 0.18), transparent 45%),
-    radial-gradient(circle at 80% 80%, rgba(0, 217, 180, 0.16), transparent 50%),
-    linear-gradient(140deg, #071a22 0%, #0c2f38 55%, #0f4957 100%);
+    linear-gradient(rgba(7, 26, 34, 0.62), rgba(7, 26, 34, 0.62)),
+    url('/login-bg.jpg') center center / cover no-repeat;
+  background-color: #0b2731;
 }
 
 .auth-container {
@@ -17,6 +17,7 @@
 
 .auth-card {
   background: rgba(255, 255, 255, 0.95);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(21, 132, 148, 0.18);
   padding: 36px;
@@ -93,6 +94,10 @@
   padding: 13px;
   font-size: 16px;
   margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   border: none;
   border-radius: 12px;
   font-weight: 700;
