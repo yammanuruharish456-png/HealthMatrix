@@ -438,8 +438,10 @@ tbody tr:hover {
 .section-header-doctors .btn-primary {
   grid-column: 3;
   justify-self: end;
-  padding: 5px 5px;
-  font-size: 11px;
+  min-height: 34px;
+  padding: 7px 14px;
+  font-size: 12px;
+  line-height: 1;
   gap: 6px;
 }
 
@@ -1482,6 +1484,18 @@ tbody tr:hover {
   border-radius: 999px;
   margin: 8px auto 0;
   background: linear-gradient(90deg, #1f5f99 0%, #14a16f 100%);
+}
+
+/* Remove underline accents under admin module headings */
+.admin-dashboard .recent-section h2::after,
+.admin-dashboard .pending-section h2::after,
+.admin-dashboard .appointments-section h2::after,
+.admin-dashboard .contacts-section h2::after,
+.admin-dashboard .callbacks-section h2::after,
+.admin-dashboard .staff-section h2::after,
+.admin-dashboard .doctors-section h2::after,
+.admin-dashboard .section-header h2::after {
+  display: none;
 }
 
 .admin-dashboard .section-header {
