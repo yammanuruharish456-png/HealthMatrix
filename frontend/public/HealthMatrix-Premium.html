@@ -89,7 +89,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 .navbar.scrolled{background:rgba(236,243,247,0.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:var(--shadow-md);border-bottom:1px solid rgba(21,132,148,0.14)}
 .logo{display:flex;align-items:center;gap:12px}
 .logo-mark{width:40px;height:40px;background:linear-gradient(135deg,var(--teal-500),var(--teal-300));border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 4px 12px rgba(21,132,148,0.35)}
-.logo-text{font-family:var(--font-display);font-weight:800;font-size:18px;letter-spacing:-0.5px;line-height:1.1}
+.logo-text{font-family:var(--font-display);font-weight:800;font-size:18px;letter-spacing:-0.5px;line-height:1.1;color:#111827}
 .logo-text span{display:block;font-size:10px;font-weight:500;color:var(--text-muted);letter-spacing:1px;text-transform:uppercase;font-family:var(--font-body)}
 .nav-links{display:flex;align-items:center;gap:4px}
 .nav-link{padding:8px 14px;border-radius:var(--radius-sm);font-size:14px;font-weight:500;color:#2f5f70;transition:all var(--transition);position:relative}
@@ -1623,8 +1623,7 @@ function toggleDark(){
     ? '<path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>'
     : '<circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>';
 }
-// Check system preference
-if(window.matchMedia('(prefers-color-scheme: dark)').matches) toggleDark();
+// Startup default theme remains light.
 
 // ===== NAVBAR SCROLL =====
 window.addEventListener('scroll', ()=>{
