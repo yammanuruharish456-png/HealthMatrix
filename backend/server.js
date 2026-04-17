@@ -2,13 +2,31 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const dotenv = require('dotenv');
+const path = require('path');
 
 dotenv.config();
 
 const app = express();
 
 // Middleware
-app.use(cors());
+const allowedOrigins = [
+  process.env.FRONTEND_URL,
+  'http://localhost:3000'
+].filter(Boolean);
+
+app.use(cors({
+  origin: (origin, callback) => {
+    // Allow non-browser requests and same-origin requests without Origin header.
+    if (!origin) return callback(null, true);
+
+    if (allowedOrigins.length === 0 || allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    }
+
+    return callback(new Error('Not allowed by CORS'));
+  },
+  credentials: true
+}));
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 
@@ -43,6 +61,20 @@ app.use('/api/nurse', require('./routes/nurse'));
 app.get('/api/health', (req, res) => {
   res.json({ status: 'OK', message: 'Health Matrix Hospital API is running' });
 });
+
+// Serve React build from the backend in production.
+if (process.env.NODE_ENV === 'production') {
+  const frontendBuildPath = path.resolve(__dirname, '..', 'frontend', 'build');
+  app.use(express.static(frontendBuildPath));
+
+  app.get('*', (req, res) => {
+    if (req.path.startsWith('/api/')) {
+      return res.status(404).json({ message: 'API route not found' });
+    }
+
+    return res.sendFile(path.join(frontendBuildPath, 'index.html'));
+  });
+}
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
