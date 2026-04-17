@@ -414,6 +414,15 @@ tbody tr:hover {
   border-bottom: 2px solid #e8eaed;
 }
 
+.section-header:not(.section-header-doctors) {
+  justify-content: center;
+}
+
+.section-header:not(.section-header-doctors) h2 {
+  margin: 0 auto;
+  text-align: center;
+}
+
 .section-header-doctors {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
@@ -429,8 +438,8 @@ tbody tr:hover {
 .section-header-doctors .btn-primary {
   grid-column: 3;
   justify-self: end;
-  padding: 8px 14px;
-  font-size: 13px;
+  padding: 5px 5px;
+  font-size: 11px;
   gap: 6px;
 }
 
