@@ -239,22 +239,26 @@ const DoctorDashboard = () => {
   return (
     <div className="doctor-dashboard">
       <div className="dashboard-header">
-        <div className="container" style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
-          <div>
-            <h1>Doctor Dashboard</h1>
-            <p>Welcome, Dr. {user?.name}</p>
+        <div className="container">
+          <div className="header-content">
+            <div className="user-info">
+              <h1>Welcome, Dr. {user?.name}</h1>
+              <p>Doctor Dashboard</p>
+            </div>
+            <div className="header-actions">
+              <button 
+                onClick={() => {
+                  localStorage.removeItem('token');
+                  localStorage.removeItem('user');
+                  navigate('/doctor-login');
+                  toast.success('Logged out successfully');
+                }}
+                className="logout-btn"
+              >
+                <FaSignOutAlt /> Logout
+              </button>
+            </div>
           </div>
-          <button 
-            onClick={() => {
-              localStorage.removeItem('token');
-              localStorage.removeItem('user');
-              navigate('/doctor-login');
-              toast.success('Logged out successfully');
-            }}
-            className="btn-logout"
-          >
-            <FaSignOutAlt /> Logout
-          </button>
         </div>
       </div>
 
