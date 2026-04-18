@@ -922,4 +922,182 @@
   border: 1px solid #b7cfe6;
 }
 
+/* Final authoritative patient-style layer for Doctor Dashboard */
+.doctor-dashboard {
+  background: linear-gradient(135deg, #0d1b2a 0%, #1a2332 50%, #0f1419 100%) !important;
+  color: #333;
+}
+
+.doctor-dashboard::before {
+  display: none !important;
+  background: none !important;
+}
+
+.doctor-dashboard .dashboard-header {
+  position: static !important;
+  border-radius: 0 !important;
+  padding: 40px 0 !important;
+  background: linear-gradient(135deg, #2D9CDB 0%, #1E6BA8 50%, #0E4C92 100%) !important;
+  box-shadow: 0 10px 40px rgba(45, 156, 219, 0.3) !important;
+}
+
+.doctor-dashboard .dashboard-header h1,
+.doctor-dashboard .dashboard-header p {
+  color: #ffffff !important;
+}
+
+.doctor-dashboard .btn-logout {
+  background: rgba(255, 255, 255, 0.2) !important;
+  color: #ffffff !important;
+  border: 2px solid rgba(255, 255, 255, 0.3) !important;
+  box-shadow: none !important;
+}
+
+.doctor-dashboard .btn-logout:hover {
+  background: rgba(255, 255, 255, 0.3) !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.doctor-dashboard .stats-cards {
+  gap: 20px;
+}
+
+.doctor-dashboard .stat-card,
+.doctor-dashboard .stat-card.pending,
+.doctor-dashboard .stat-card.confirmed,
+.doctor-dashboard .stat-card.completed {
+  background: linear-gradient(135deg, #00d4ff 0%, #0099cc 50%, #006699 100%) !important;
+  color: #ffffff !important;
+  border: none !important;
+  box-shadow: 0 8px 20px rgba(0, 212, 255, 0.3) !important;
+}
+
+.doctor-dashboard .stat-card:hover,
+.doctor-dashboard .stat-card.pending:hover,
+.doctor-dashboard .stat-card.confirmed:hover,
+.doctor-dashboard .stat-card.completed:hover {
+  box-shadow: 0 12px 30px rgba(0, 212, 255, 0.4) !important;
+}
+
+.doctor-dashboard .stat-card svg,
+.doctor-dashboard .stat-card h3,
+.doctor-dashboard .stat-card p {
+  color: #ffffff !important;
+  opacity: 1;
+}
+
+.doctor-dashboard .dashboard-content {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
+}
+
+.doctor-dashboard .tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  background: #ffffff !important;
+  padding: 20px;
+  border-radius: 12px !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08) !important;
+}
+
+.doctor-dashboard .tabs button {
+  background: #f0f2f5 !important;
+  border: 2px solid transparent !important;
+  color: #555 !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+}
+
+.doctor-dashboard .tabs button:hover {
+  background: #e8eaed !important;
+  transform: translateY(-2px);
+}
+
+.doctor-dashboard .tabs button.active {
+  background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%) !important;
+  color: #ffffff !important;
+  border-color: #00d4ff !important;
+}
+
+.doctor-dashboard .appointments-section,
+.doctor-dashboard .reports-section,
+.doctor-dashboard .vitals-section,
+.doctor-dashboard .medical-history-section,
+.doctor-dashboard .messages-section,
+.doctor-dashboard .schedule-section,
+.doctor-dashboard .section,
+.doctor-dashboard .appointment-item,
+.doctor-dashboard .report-card,
+.doctor-dashboard .prescription-item,
+.doctor-dashboard .lab-result-card,
+.doctor-dashboard .prescription-card,
+.doctor-dashboard .modal-content,
+.doctor-dashboard table {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05) !important;
+}
+
+.doctor-dashboard .appointment-item:hover,
+.doctor-dashboard .report-card:hover,
+.doctor-dashboard .prescription-item:hover {
+  border-color: #00d4ff !important;
+}
+
+.doctor-dashboard .appointments-section h2,
+.doctor-dashboard .reports-section h2,
+.doctor-dashboard .vitals-section h2,
+.doctor-dashboard .medical-history-section h2,
+.doctor-dashboard .messages-section h2,
+.doctor-dashboard .schedule-section h2,
+.doctor-dashboard .section h2,
+.doctor-dashboard th,
+.doctor-dashboard td,
+.doctor-dashboard p,
+.doctor-dashboard label,
+.doctor-dashboard h3,
+.doctor-dashboard h4,
+.doctor-dashboard strong {
+  color: #333 !important;
+}
+
+.doctor-dashboard .appointments-table thead,
+.doctor-dashboard table thead {
+  background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%) !important;
+}
+
+.doctor-dashboard table th {
+  color: #ffffff !important;
+}
+
+.doctor-dashboard .btn-primary,
+.doctor-dashboard .btn-lab,
+.doctor-dashboard .btn-complete,
+.doctor-dashboard .btn-download,
+.doctor-dashboard .btn-review,
+.doctor-dashboard .btn-success {
+  background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%) !important;
+  color: #ffffff !important;
+}
+
+.doctor-dashboard .btn-confirm {
+  background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%) !important;
+  color: #ffffff !important;
+}
+
+.doctor-dashboard .btn-secondary {
+  background: #e8eaed !important;
+  color: #333 !important;
+}
+
+.doctor-dashboard .btn-cancel {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%) !important;
+  color: #ffffff !important;
+}
+
 
