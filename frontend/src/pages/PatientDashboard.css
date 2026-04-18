@@ -1568,7 +1568,7 @@
   color: #1a456b;
 }
 
-/* Final patient module theme: white text across modules */
+/* Final patient module theme: white backgrounds with blue text */
 .patient-dashboard .overview-section,
 .patient-dashboard .appointments-section,
 .patient-dashboard .prescriptions-section,
@@ -1586,8 +1586,8 @@
 .patient-dashboard .recent-section,
 .patient-dashboard .no-data-card,
 .patient-dashboard .no-data {
-  background: linear-gradient(165deg, #15324b 0%, #10273d 55%, #0d2235 100%) !important;
-  border-color: rgba(121, 167, 209, 0.35) !important;
+  background: linear-gradient(180deg, #ffffff 0%, #f5f9ff 100%) !important;
+  border-color: #cfe0f2 !important;
 }
 
 .patient-dashboard .section-header h2,
@@ -1625,16 +1625,12 @@
 .patient-dashboard .settings-card span,
 .patient-dashboard .settings-card strong,
 .patient-dashboard .prescription-info p {
-  color: #f4fbff !important;
-}
-
-.patient-dashboard .status {
-  color: #f4fbff;
+  color: #1a456b !important;
 }
 
 .patient-dashboard table th,
 .patient-dashboard table td {
-  color: #f4fbff !important;
+  color: #1a456b !important;
 }
 
 .patient-dashboard .card-header,
@@ -1644,14 +1640,42 @@
   color: #ffffff !important;
 }
 
+.patient-dashboard .appointment-card .card-header .appointment-date,
+.patient-dashboard .prescription-card .card-header .prescription-date,
+.patient-dashboard .report-card .card-header h3,
+.patient-dashboard .bill-card .card-header h3 {
+  color: #ffffff !important;
+}
+
+.patient-dashboard .appointment-card .card-header .status {
+  color: #163f65 !important;
+  background: #f7e7bf !important;
+  border: 1px solid #e8d3a5;
+}
+
+.patient-dashboard .appointment-card .card-header .status.status-confirmed {
+  background: #d8f5e4 !important;
+  color: #145a32 !important;
+}
+
+.patient-dashboard .appointment-card .card-header .status.status-completed {
+  background: #d9eef9 !important;
+  color: #0b4d66 !important;
+}
+
+.patient-dashboard .appointment-card .card-header .status.status-cancelled {
+  background: #f9d6db !important;
+  color: #7f1d1d !important;
+}
+
 .patient-dashboard .notes,
 .patient-dashboard .findings,
 .patient-dashboard .medication-item,
 .patient-dashboard .upcoming-item,
 .patient-dashboard .activity-item,
 .patient-dashboard .upi-payment-box {
-  background: rgba(255, 255, 255, 0.08) !important;
-  border-color: rgba(151, 193, 229, 0.35) !important;
+  background: #f2f7fe !important;
+  border-color: #cfe0f2 !important;
 }
 
 
