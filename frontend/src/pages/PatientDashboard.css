@@ -1568,4 +1568,90 @@
   color: #1a456b;
 }
 
+/* Final patient module theme: white text across modules */
+.patient-dashboard .overview-section,
+.patient-dashboard .appointments-section,
+.patient-dashboard .prescriptions-section,
+.patient-dashboard .reports-section,
+.patient-dashboard .bills-section,
+.patient-dashboard .settings-section,
+.patient-dashboard .overview-card,
+.patient-dashboard .appointment-card,
+.patient-dashboard .prescription-card,
+.patient-dashboard .report-card,
+.patient-dashboard .bill-card,
+.patient-dashboard .settings-card,
+.patient-dashboard .profile-section,
+.patient-dashboard .account-actions,
+.patient-dashboard .recent-section,
+.patient-dashboard .no-data-card,
+.patient-dashboard .no-data {
+  background: linear-gradient(165deg, #15324b 0%, #10273d 55%, #0d2235 100%) !important;
+  border-color: rgba(121, 167, 209, 0.35) !important;
+}
+
+.patient-dashboard .section-header h2,
+.patient-dashboard .appointments-section .section-header h2,
+.patient-dashboard .prescriptions-section h2,
+.patient-dashboard .reports-section h2,
+.patient-dashboard .bills-section h2,
+.patient-dashboard .settings-section > h2,
+.patient-dashboard .profile-section .section-header h3,
+.patient-dashboard .account-actions h3,
+.patient-dashboard .overview-card h3,
+.patient-dashboard .card-header h3,
+.patient-dashboard .card-body h3,
+.patient-dashboard .card-body p,
+.patient-dashboard .card-body strong,
+.patient-dashboard .activity-details p,
+.patient-dashboard .activity-date,
+.patient-dashboard .apt-details strong,
+.patient-dashboard .apt-details p,
+.patient-dashboard .specialty,
+.patient-dashboard .time,
+.patient-dashboard .reason,
+.patient-dashboard .findings p,
+.patient-dashboard .findings strong,
+.patient-dashboard .medications h4,
+.patient-dashboard .medication-item,
+.patient-dashboard .more-meds,
+.patient-dashboard .upi-title,
+.patient-dashboard .no-data,
+.patient-dashboard .no-data-card p,
+.patient-dashboard .empty-state-title,
+.patient-dashboard .form-group label,
+.patient-dashboard .form-group p,
+.patient-dashboard .settings-card p,
+.patient-dashboard .settings-card span,
+.patient-dashboard .settings-card strong,
+.patient-dashboard .prescription-info p {
+  color: #f4fbff !important;
+}
+
+.patient-dashboard .status {
+  color: #f4fbff;
+}
+
+.patient-dashboard table th,
+.patient-dashboard table td {
+  color: #f4fbff !important;
+}
+
+.patient-dashboard .card-header,
+.patient-dashboard .apt-date,
+.patient-dashboard .activity-icon {
+  background: linear-gradient(135deg, #1f6aa8 0%, #185889 100%) !important;
+  color: #ffffff !important;
+}
+
+.patient-dashboard .notes,
+.patient-dashboard .findings,
+.patient-dashboard .medication-item,
+.patient-dashboard .upcoming-item,
+.patient-dashboard .activity-item,
+.patient-dashboard .upi-payment-box {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(151, 193, 229, 0.35) !important;
+}
+
 

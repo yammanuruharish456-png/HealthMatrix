@@ -87,7 +87,7 @@ const PatientDashboard = () => {
     if (!appointment || appointment.status === 'cancelled' || appointment.status === 'completed') {
       return false;
     }
-    return new Date(appointment.appointmentDate) > new Date();
+    return true;
   };
 
   const cancelAppointment = async (appointmentId) => {
