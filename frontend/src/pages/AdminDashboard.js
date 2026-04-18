@@ -346,8 +346,8 @@ const AdminDashboard = () => {
         <div className="container">
           <div className="header-content">
             <div className="user-info">
-            <h1>Admin Dashboard</h1>
-            <p>Welcome, {user?.name}</p>
+            <h1>Welcome, {user?.name}</h1>
+            <p>Admin Dashboard</p>
             </div>
             <div className="header-actions">
               <button 
@@ -357,7 +357,7 @@ const AdminDashboard = () => {
                   navigate('/admin-login');
                   toast.success('Logged out successfully');
                 }}
-                className="btn-logout"
+                className="logout-btn"
               >
                 <FaSignOutAlt /> Logout
               </button>
