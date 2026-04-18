@@ -1338,9 +1338,22 @@ tbody tr:hover {
 
   .admin-dashboard .dashboard-tabs {
     flex-direction: column;
-
   }
 
+  .admin-dashboard .dashboard-tabs button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .admin-dashboard .section-header-doctors {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-dashboard .section-header-doctors h2,
+  .admin-dashboard .section-header-doctors .btn-primary {
+    justify-self: center;
+  }
+}
 
 /* Authoritative patient-style admin header/background overrides */
 .admin-dashboard {
@@ -1413,20 +1426,6 @@ tbody tr:hover {
   background: rgba(255, 255, 255, 0.3) !important;
   border-color: rgba(255, 255, 255, 0.5) !important;
   transform: translateY(-2px);
-}
-  .admin-dashboard .dashboard-tabs button {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .admin-dashboard .section-header-doctors {
-    grid-template-columns: 1fr;
-  }
-
-  .admin-dashboard .section-header-doctors h2,
-  .admin-dashboard .section-header-doctors .btn-primary {
-    justify-self: center;
-  }
 }
 
 /* Final admin layout fix: patient-overview style + centered module titles */
@@ -1761,6 +1760,30 @@ tbody tr:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* Final override: white background across admin modules */
+.admin-dashboard {
+  background: #ffffff !important;
+}
+
+.admin-dashboard .dashboard-content,
+.admin-dashboard .dashboard-tabs,
+.admin-dashboard .overview-section,
+.admin-dashboard .pending-section,
+.admin-dashboard .doctors-section,
+.admin-dashboard .appointments-section,
+.admin-dashboard .staff-section,
+.admin-dashboard .contacts-section,
+.admin-dashboard .callbacks-section,
+.admin-dashboard .recent-section,
+.admin-dashboard .section,
+.admin-dashboard .pending-card,
+.admin-dashboard .callback-card,
+.admin-dashboard .contact-card,
+.admin-dashboard .modal-content,
+.admin-dashboard table {
+  background: #ffffff !important;
 }
 
 
